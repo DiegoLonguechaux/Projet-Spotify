@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoteezer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main" id="main">
+        <header class="header">
+                    <h1 class="header__title" onclick="openpage()">
+                        <svg class="header__logo" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="15" fill="#F2CB00" />
+                            <rect x="20" y="14" width="6" height="9" rx="3" fill="black" />
+                            <rect x="4" y="14" width="6" height="9" rx="3" fill="black" />
+                            <path
+                                d="M7.00016 14.4999C6.8335 11.9999 8.18864 6.99909 15.0004 6.99976C17.5 7 23.0001 8.49994 23.0001 14.4999"
+                                stroke="black" />
+                        </svg>
+                        <span class="spoteezer">Spoteezer</span>
+                    </h1>
+                    <div class="btn__header" id="btn__header">
+                        <button class="btn_accueil" id="togg">
+                            <svg class="logo-accueil" width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M29.7224 15L15 0L0.277568 15H0V30H11V21H19V30H30V15H29.7224Z" fill="#F2CB00"/>
+                            </svg>                                                                
+                            <span class="txt-accueil">Accueil</span>
+                        </button>
+                        <button class="btn_playlist" id="togg1">
+                            <svg class="logo-playlist" width="20" height="20" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="24" r="6" fill="#F2CB00"/>
+                                <line x1="22.5" y1="1.5" x2="22.5" y2="23.5" stroke="#F2CB00" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M24.795 1.728L23.523 0.933004L21.933 3.477L23.205 4.272L24.795 1.728ZM29.509 8.212C30.2115 8.65107 31.1369 8.43751 31.576 7.735C32.0151 7.0325 31.8015 6.10707 31.099 5.668L29.509 8.212ZM23.205 4.272L29.509 8.212L31.099 5.668L24.795 1.728L23.205 4.272Z" fill="#F2CB00"/>
+                                <line x1="1.5" y1="4.5" x2="15.5" y2="4.5" stroke="#F2CB00" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="1.5" y1="11.5" x2="15.5" y2="11.5" stroke="#F2CB00" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="1.5" y1="18.5" x2="9.5" y2="18.5" stroke="#F2CB00" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="1.5" y1="24.5" x2="9.5" y2="24.5" stroke="#F2CB00" stroke-width="3" stroke-linecap="round"/>
+                            </svg>                             
+                            <span class="txt-playlist">Playlist</span>
+                        </button>
+                        <button class="btn_artiste" id="togg2">
+                            <svg class="logo-artiste" width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12.1221" cy="7" r="7" fill="#F2CB00"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0133781 22.4246C0.133409 21.017 1.05507 19.7247 2.53293 18.6827C2.9871 18.326 3.49329 18.0076 4.03666 17.727C6.23473 16.592 9.13015 16.0206 11.9969 16.0005C14.8633 15.9805 17.7612 16.5111 19.9626 17.6374C20.841 18.0869 21.6206 18.6391 22.2407 19.2966C23.2634 20.2151 23.8892 21.2819 23.9866 22.4246H24V22.739V29.9678H0V22.739V22.4246H0.0133781Z" fill="#F2CB00"/>
+                            </svg>                            
+                            <span class="txt-artiste">Artistes</span>
+                        </button>
+                        <button class="btn_album" id="togg3">
+                            <svg class="logo-album" width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895508 0 0 0.895508 0 2V28C0 29.1045 0.895508 30 2 30H28C29.1045 30 30 29.1045 30 28V2C30 0.895508 29.1045 0 28 0H2ZM10.998 9.40039C10.998 8.91455 11.3472 8.49902 11.8257 8.41528L19.8257 7.01514C20.4375 6.9082 20.998 7.37915 20.998 8.00024V10.8101V11.2212V18.8101H20.9468C20.979 19.9067 20.1167 21.1924 18.7007 21.9917C16.9067 23.0044 14.9028 22.8523 14.2251 21.6519C13.5474 20.4512 14.4526 18.657 16.2466 17.644C17.1792 17.1179 18.168 16.906 18.998 16.9924V12.4102L12.998 13.46V19.8101H12.9365C12.832 20.8403 11.999 21.9824 10.7007 22.7153C8.90674 23.728 6.90283 23.5759 6.2251 22.3755C5.54736 21.1748 6.45264 19.3806 8.24658 18.3677C9.1792 17.8416 10.168 17.6296 10.998 17.7161V12.6199V11.8101V9.40039Z" fill="#F2CB00"/>
+                            </svg>
+                            <span class="txt-album">Albums</span>
+                        </button>
+                    </div>
+                    <div class="compte">
+                        <img src="https://i.pravatar.cc/600" alt="compte">
+                    </div>
+        </header>
+    <div class="page1 show-page" id="page1">
+
+        <h2 class="h2">Ma Musique</h2>
+
+        <!-------------- Playlists -------------->
+        <section class="playlist" id="playlist">
+            <h3 class="h3">Playlists</h3>
+            <section id="partie2"></section>
+            <ul class="cards__list__playlist">
+                <template id="playlist-template">
+                    <li class="cards__items" onclick="openpage('#page2');getPlaylist('{{idplaylists}}')">
+                        <figure class="card card--trend">
+                            <div class="card__vignette">
+                                <div class="card__img-container">
+                                    <img src="./img/{{image}}" alt="" class="picture">
+                                </div>
+                                <button class="btn-play">
+                                    <svg class="btn-play__switch" width="48" height="48" viewBox="0 0 48 48"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- <rect width="48" height="48" rx="24" fill="#1ED760"/> -->
+                                        <path
+                                            d="M19.05 15.606L32.54 23.394C32.6463 23.4555 32.7346 23.5438 32.7959 23.6502C32.8573 23.7565 32.8896 23.8772 32.8896 24C32.8896 24.1228 32.8573 24.2434 32.7959 24.3498C32.7346 24.4562 32.6463 24.5445 32.54 24.606L19.05 32.394C18.9436 32.4554 18.8229 32.4878 18.7001 32.4878C18.5772 32.4878 18.4565 32.4555 18.3501 32.394C18.2437 32.3326 18.1553 32.2443 18.0939 32.1379C18.0324 32.0315 18 31.9108 18 31.788V16.212C18 16.0891 18.0324 15.9684 18.0939 15.8621C18.1553 15.7557 18.2437 15.6673 18.3501 15.6059C18.4565 15.5445 18.5772 15.5122 18.7001 15.5122C18.8229 15.5122 18.9436 15.5446 19.05 15.606Z"
+                                            fill="black" />
+                                    </svg>
+                                    <span class="sr-only">Play</span>
+                                </button>
+                            </div>
+                            <figcaption class="card__content">
+                                <h4 class="card__title">{{nom}}</h4>
+                                <div class="card__info">
+                                    <span>{{description}}</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+
+        <!-------------- Artistes -------------->
+        <section class="artiste" id="artiste">
+            <h3 class="h3">Artistes</h3>
+            <section id="partie3"></section>
+            <ul class="cards__list__artist">
+                <template id="artistes-template">
+                    <li class="cards__items" onclick="openpage('#page2-1');getArtisteContent('{{idartistes}}')">
+                        <figure class="card card--trend">
+                            <div class="card__vignette">
+                                <div class="card__img-container-artiste">
+                                    <img src="./img/{{image}}" alt="" class=" artiste__img">
+                                </div>
+                                <button class="btn-play">
+                                    <svg class="btn-play__switch" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <!-- <rect width="48" height="48" rx="24" fill="#1ED760"/> -->
+                                        <path
+                                            d="M19.05 15.606L32.54 23.394C32.6463 23.4555 32.7346 23.5438 32.7959 23.6502C32.8573 23.7565 32.8896 23.8772 32.8896 24C32.8896 24.1228 32.8573 24.2434 32.7959 24.3498C32.7346 24.4562 32.6463 24.5445 32.54 24.606L19.05 32.394C18.9436 32.4554 18.8229 32.4878 18.7001 32.4878C18.5772 32.4878 18.4565 32.4555 18.3501 32.394C18.2437 32.3326 18.1553 32.2443 18.0939 32.1379C18.0324 32.0315 18 31.9108 18 31.788V16.212C18 16.0891 18.0324 15.9684 18.0939 15.8621C18.1553 15.7557 18.2437 15.6673 18.3501 15.6059C18.4565 15.5445 18.5772 15.5122 18.7001 15.5122C18.8229 15.5122 18.9436 15.5446 19.05 15.606Z"
+                                            fill="black" />
+                                    </svg>
+                                    <span class="sr-only">Play</span>
+                                </button>
+                            </div>
+                            <figcaption class="card__content__artiste">
+                                <h4 class="card__title">{{nom}}</h4>
+                                <div class="card__info">
+                                    <span>{{type}}</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+
+        <!-------------- Albums -------------->
+        <section class="album" id="album">
+            <h3 class="h3">Albums</h3>
+            <section id="partie4"></section>
+            <ul class="cards__list__album">
+                <template id="albums-template">
+                    <li class="cards__items" onclick="openpage('#page2');getAlbum('{{idalbums}}')">
+                        <figure class="card card--trend">
+                            <div class="card__vignette">
+                                <div class="card__img-container">
+                                    <img src="./img/{{image}}" alt="" class="picture">
+                                </div>
+                                <button class="btn-play">
+                                    <svg class="btn-play__switch" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <!-- <rect width="48" height="48" rx="24" fill="#1ED760"/> -->
+                                        <path
+                                            d="M19.05 15.606L32.54 23.394C32.6463 23.4555 32.7346 23.5438 32.7959 23.6502C32.8573 23.7565 32.8896 23.8772 32.8896 24C32.8896 24.1228 32.8573 24.2434 32.7959 24.3498C32.7346 24.4562 32.6463 24.5445 32.54 24.606L19.05 32.394C18.9436 32.4554 18.8229 32.4878 18.7001 32.4878C18.5772 32.4878 18.4565 32.4555 18.3501 32.394C18.2437 32.3326 18.1553 32.2443 18.0939 32.1379C18.0324 32.0315 18 31.9108 18 31.788V16.212C18 16.0891 18.0324 15.9684 18.0939 15.8621C18.1553 15.7557 18.2437 15.6673 18.3501 15.6059C18.4565 15.5445 18.5772 15.5122 18.7001 15.5122C18.8229 15.5122 18.9436 15.5446 19.05 15.606Z"
+                                            fill="black" />
+                                    </svg>
+                                    <span class="sr-only">Play</span>
+                                </button>
+                            </div>
+                            <figcaption class="card__content">
+                                <h4 class="card__title">{{nom}}</h4>
+                                <div class="card__info">
+                                    <span>{{type}}</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+
+    </div>
+
+    <!---------- PAGE 2 ---------->
+    <div class="page2 hide-page" id="page2">
+        
+        <!-- Présentation pochette -->
+        <section class="pochette__présentation">
+            <figure class="card__pochette">
+                <button class="btn-back" onclick="openpage('#page2')">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6L6.277 0L7 0.691L1.446 6L7 11.309L6.277 12L0 6Z" fill="white" />
+                    </svg>
+                </button>
+            </figure>
+            <section id="partie__pochette"></section>
+            <template id="template__pochette">
+                <div class="pochette__info">
+                    <div class="pochette__img">
+                        <img src="./img/{{image}}" alt="" class="picture_pochette">
+                    </div>
+                    <p class="pochette__type">{{type}}</p>
+                    <h1 class="pochette__title">{{nom}}</h1>
+                    <div class="pochette__description">
+                        <span>{{description}}</span>
+                    </div>
+                </div>
+            </template>
+        </section>
+
+        <!-- Title list-->
+        <section class="partie1__titre">
+            <div class="title__list">
+                <p>TITRE</p>
+                <p>ARTISTE</p>
+                <svg class="time__logo" width="17" height="16" viewBox="0 0 17 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.9375 8C15.9375 6.14348 15.1539 4.36301 13.7591 3.05025C12.3643 1.7375 10.4725 1 8.5 1C6.52745 1 4.63569 1.7375 3.24089 3.05025C1.84609 4.36301 1.0625 6.14348 1.0625 8C1.0625 9.85652 1.84609 11.637 3.24089 12.9497C4.63569 14.2625 6.52745 15 8.5 15C10.4725 15 12.3643 14.2625 13.7591 12.9497C15.1539 11.637 15.9375 9.85652 15.9375 8ZM17 8C17 10.1217 16.1045 12.1566 14.5104 13.6569C12.9163 15.1571 10.7543 16 8.5 16C6.24566 16 4.08365 15.1571 2.48959 13.6569C0.895533 12.1566 0 10.1217 0 8C0 5.87827 0.895533 3.84344 2.48959 2.34315C4.08365 0.842855 6.24566 0 8.5 0C10.7543 0 12.9163 0.842855 14.5104 2.34315C16.1045 3.84344 17 5.87827 17 8ZM7.4375 3.2V8.604L11.5005 11.664L12.1646 10.882L8.5 8.123V3.2H7.4375Z"
+                        fill="#A4A3A3" />
+                </svg>
+            </div>
+        </section>
+
+
+        <!-- Title items -->
+        <section class="partie__title">
+            <section id="partie_song"></section>
+            <ul class="song__list">
+                <template id="song-template">
+                    <li class="song__items" onclick="openpage('#page3');getMorceaux('{{idmorceaux}}')">
+                        <div class="title__items">
+                            <img src="./img/{{morceaux-image}}" alt="" class="title__picture">
+                            <p class="song__title">{{titre}}</p>
+                            <p class="name__artist">{{nom}}</p>
+                            <p class="time__song">{{duree}}</p>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+
+    </div>
+
+
+
+<!---------- PAGE 2.1 ---------->
+<div class="page2-1 hide-page" id="page2-1">
+        
+    <!-- Présentation pochette -->
+    <section class="pochette__présentation">
+        <figure class="card__pochette">
+            <button class="btn-back" onclick="openpage('#page2-1')">
+                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 6L6.277 0L7 0.691L1.446 6L7 11.309L6.277 12L0 6Z" fill="white" />
+                </svg>
+            </button>
+        </figure>
+        <section id="partie__pochette2"></section>
+        <template id="template__pochette2">
+            <div class="pochette__info">
+                <div class="pochette__img">
+                    <img src="./img/{{image}}" alt="" class="picture_pochette">
+                </div>
+                <p class="pochette__type">{{type}}</p>
+                <h1 class="pochette__title">{{nom}}</h1>
+                <div class="pochette__description">
+                    <span>{{description}}</span>
+                </div>
+            </div>
+        </template>
+    </section>
+
+    <section class="album" id="album2">
+        <h3 class="h3">Discographie</h3>
+        <section ></section>
+        <ul id="artist_albums_list" class="cards__list__album"></ul>
+        <template id="albums-template2">
+            <li class="cards__items" onclick="openpage('#page2');getAlbum('{{idalbums}}')">
+                <figure class="card card--trend">
+                    <div class="card__vignette">
+                        <div class="card__img-container">
+                            <img src="./img/{{image}}" alt="" class="picture">
+                        </div>
+                        <button class="btn-play">
+                            <svg class="btn-play__switch" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <!-- <rect width="48" height="48" rx="24" fill="#1ED760"/> -->
+                                <path
+                                    d="M19.05 15.606L32.54 23.394C32.6463 23.4555 32.7346 23.5438 32.7959 23.6502C32.8573 23.7565 32.8896 23.8772 32.8896 24C32.8896 24.1228 32.8573 24.2434 32.7959 24.3498C32.7346 24.4562 32.6463 24.5445 32.54 24.606L19.05 32.394C18.9436 32.4554 18.8229 32.4878 18.7001 32.4878C18.5772 32.4878 18.4565 32.4555 18.3501 32.394C18.2437 32.3326 18.1553 32.2443 18.0939 32.1379C18.0324 32.0315 18 31.9108 18 31.788V16.212C18 16.0891 18.0324 15.9684 18.0939 15.8621C18.1553 15.7557 18.2437 15.6673 18.3501 15.6059C18.4565 15.5445 18.5772 15.5122 18.7001 15.5122C18.8229 15.5122 18.9436 15.5446 19.05 15.606Z"
+                                    fill="black" />
+                            </svg>
+                            <span class="sr-only">Play</span>
+                        </button>
+                    </div>
+                    <figcaption class="card__content">
+                        <h4 class="card__title">{{nom}}</h4>
+                        <div class="card__info">
+                            <span>{{type}}</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </li>
+        </template>
+    </section>
+
+
+
+</div>
+
+
+
+
+    <!-------------------- PAGE 3 -------------------->
+    <div class="page3 hide-page" id="page3">
+
+        <!-- Bouton repli -->
+        <section class="barre__repli">
+            <!-- <a href="index2.html"> -->
+                <button class="btn-down" onclick="openpage('#page3')">
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M6 7L-2.74376e-07 0.723L0.691 -3.02046e-08L6 5.554L11.309 -4.94332e-07L12 0.722999L6 7Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            <!-- </a> -->
+            <h2 class="ma__musique">Ma Musique</h2>
+        </section>
+
+        <!-- Contenu vidéo -->
+        <section class="partie__video">
+            <figure class="video__card">
+                <div class="bg__video">
+                    <div class="video__container">
+                        <!-- <button class="btn-yt">
+                            <svg width="143" height="101" viewBox="0 0 143 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M139.842 15.7532C139.022 12.7084 137.422 9.93248 135.201 7.70197C132.981 5.47146 130.217 3.86415 127.186 3.0401C116.089 0 71.4275 0 71.4275 0C71.4275 0 26.7635 0.0920219 15.6664 3.13212C12.6352 3.95623 9.87182 5.56362 7.65141 7.79423C5.431 10.0248 3.83107 12.8008 3.01093 15.8458C-0.345662 35.6519 -1.64774 65.8318 3.1031 84.8456C3.92332 87.8904 5.52329 90.6663 7.7437 92.8968C9.9641 95.1273 12.7275 96.7347 15.7586 97.5587C26.8556 100.599 71.5185 100.599 71.5185 100.599C71.5185 100.599 116.181 100.599 127.277 97.5587C130.309 96.7347 133.072 95.1275 135.293 92.8969C137.513 90.6664 139.113 87.8905 139.933 84.8456C143.474 65.0115 144.565 34.85 139.842 15.7532Z" fill="#FF0000"/>
+                                <path d="M57.2119 71.856L94.2623 50.2992L57.2119 28.7424V71.856Z" fill="white"/>
+                            </svg>                                   
+                        </button> -->
+                        <section id="content"></section>
+                        <template id="video-template">
+                            <iframe width="560" height="315" src="{{video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </template>
+                    </div>
+                </div>
+            </figure>
+        </section>
+
+
+    </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__info">SAé 203 - MMI1 - 2022</p>
+        <button class="button__mode">Change Mode</button>
+    </footer>
+
+    <script src="dialogue.js"></script>
+    <script src="animation.js"></script>
+    
+</body>
+
+</html>
